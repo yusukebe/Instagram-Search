@@ -1,0 +1,11 @@
+#main a
+{
+  margin:0;
+  padding:0;
+}
+#main img
+{
+  width:120px;
+  height:120px;
+  float: left;
+}
