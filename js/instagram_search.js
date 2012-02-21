@@ -5,6 +5,7 @@ $().ready(function(){
     });
     var query = $(this).children('input=["name"]').val();
     if(!query) return false;
+    $('#main').text('loading...');
     $.ajax({
       url : 'http://search.twitter.com/search.json',
       data : {
@@ -15,6 +16,7 @@ $().ready(function(){
       },
       dataType : 'jsonp',
       success : function(json){
+        $('#main').html('');
         var entries = json.results;
         if(!entries) return;
         $.each(entries,function(){
